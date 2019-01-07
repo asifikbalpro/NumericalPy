@@ -12,7 +12,7 @@ print(phi)
 g = (360 / phi ** 2 )
 print(g)
 
-n = np.arange(500) 
+n = np.arange(2000) 
 r_n = np.sqrt(n)
 theta_n = n*g 
 
@@ -23,4 +23,16 @@ plt.plot(x_n ,y_n, 's')
 plt.title("sunflower pattern")
 plt.show()
 
+n = np.arange(2500)
+a = 0.001
+b = phi / 180
 
+x_n = a * np.cos(n * phi / 180) * np.exp(n*b)
+y_n = a * np.sin(n * phi / 180) * np.exp(n*b)
+
+plt.xlabel("X")
+plt.ylabel("Y") 
+plt.plot(x_n, y_n)
+
+
+plt.show()
